@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import NavBar from '../NavBar';
 
-class App extends Component {
+class Sad extends Component {
     render() {
         return (
             <div className="App">
@@ -24,4 +24,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Sad;
