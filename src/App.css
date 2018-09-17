@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.HeaderButton {
+  display:flex;
+  flex-direction: row;
+  height: 10em;
+  width: 10em;
+  font-size:18px;
+}
+
+.TopRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1em;
+}
+
+.WholeHeader {
+  display: flex;
+  flex-direction: column;
+  border: .1em solid black;
+  margin: 1em;
+}
+
+.SecondRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1em;
+  margin-top:-.5em;
+}
+
+.ImmediateHelp {
+  display: flex;
+  height: 8em;
+  width: 8em;
+  font-size: 18px;
+}
+
+.TitleBox {
+  display: flex;
+  border: .1em solid black;
+}
+
+.MissionBox {
+  display:flex;
+  border: .1em solid black;
+}
+
+.StoryBox {
+  display: flex;
+  border: .1em solid black;
+  height: 4em;
+  width: 30em;
+}
