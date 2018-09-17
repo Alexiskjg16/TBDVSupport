@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
 <section>
     <NavBar />
+    </section>
           <section>
             <span><input placeholder="Title"></input></span>
             <span><input placeholder="Put Your Story Here!"></input></span>
@@ -17,7 +18,6 @@ class App extends Component {
             <p className="StoryBox">Previous Stories</p>
             <p className="StoryBox">Previous Stories</p>
             <p className="StoryBox">Previous Stories</p>
-          </section>
           </section>
           </div>
         );
