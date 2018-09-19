@@ -2,26 +2,28 @@
   text-align: center;
 }
 
+/*NavBar*/
+
 .HeaderButton {
   display:flex;
   flex-direction: row;
   height: 10em;
   width: 10em;
   font-size:18px;
+  margin-left: 2em;
 }
 
 .TopRow {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 1em;
+  margin: .5em;
 }
 
 .WholeHeader {
   display: flex;
   flex-direction: column;
-  border: .1em solid black;
-  margin: 1em;
+  background-color: rgba(170, 90, 245, 0.795);
 }
 
 .SecondRow {
@@ -29,7 +31,8 @@
   flex-direction: row;
   justify-content: center;
   margin: 1em;
-  margin-top:-.5em;
+  margin-top:1em;
+  margin-left: -1em;
 }
 
 .ImmediateHelp {
@@ -41,17 +44,76 @@
 
 .TitleBox {
   display: flex;
-  border: .1em solid black;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border: .1em solid rgb(73, 186, 238);
+  font-size: 52px;
+  width: 25em;
+ 
 }
 
 .MissionBox {
   display:flex;
-  border: .1em solid black;
+  width: 50em;
+  margin-right: 8em;
+  background-color: white;
+  border: .1em solid purple;
 }
+
+/*HappySadPages*/
 
 .StoryBox {
   display: flex;
+  border: .1em solid purple;
+  margin-left: 20em;
+  height: 8em;
+  width: 50em;
+}
+
+.paragraphbox {
+  display: flex;
+  align-content: center;
+  margin-left: 40em;
+  height: 12em;
+  width: 50em;
+}
+
+.topofcontext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.headofinput {
+  display: flex;
+  margin-right: 11em;
+  margin-bottom: 3em;
+  height: 3em;
+  width: 14em;
+}
+
+/*ImmediateHelpPage*/
+
+.mapbox {
+  display: flex;
   border: .1em solid black;
-  height: 4em;
-  width: 30em;
+  width: 20em;
+  height: 20em;
+}
+
+.immediatecontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+/*HomePage*/
+
+.AboutHome {
+  background-color: rgba(220, 62, 241, 0.795);
+  height: 100px;
+
 }

@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import '../App.css';
 import NavBar from '../NavBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class ImmediateHelp extends Component {
     render() {
         return (
             <div className="App">
-                <section>
-                    <NavBar />
+                <section className="immediatecontent">
+                    <ul>
+                        <li> list of resources </li>
+                        <li> in the Tampa Bay Area </li>
+                    </ul>
+                    <section className="mapbox">
+                        <p> There will be a map here </p>
+                    </section>
                 </section>
-                <h1> hello! </h1>
             </div>
         )
     }

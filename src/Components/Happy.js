@@ -7,11 +7,11 @@ class App extends Component {
         return (
             <div className="App">
                 <section>
-                    <NavBar />
-                </section>
-                <section>
-                    <span><input placeholder="Title"></input></span>
-                    <span><input placeholder="Put Your Story Here!"></input></span>
+                    <section className="topofcontext">
+                    <span><input className="headofinput" placeholder="Title"></input></span>
+                    <span><input className="headofinput" placeholder="UserName"></input></span>
+                    </section>
+                    <span><input className="paragraphbox" placeholder="Put Your Story Here!"></input></span>
                     <span><button>Submit</button></span>
                 </section>
                 <section>

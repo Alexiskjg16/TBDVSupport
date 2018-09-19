@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 class NavBar extends Component {
@@ -8,12 +8,12 @@ class NavBar extends Component {
         <div className="App">
           <section className="WholeHeader">
             <section className="TopRow">
-            <header className="TitleBox"> SupportResource </header>
-            <button className="HeaderButton"><Link to="/FeelEmpowered">I Feel Empowered!</Link></button>
-            <button className="HeaderButton"><Link to="/NeedEncouragement">I Need Encouragement</Link></button>
+            <header className="TitleBox"><Link to="/">SupportResource</Link></header>
+            <button className="HeaderButton"><Link to="/FeelEmpowered">I Want to Share Good!</Link></button>
+            <button className="HeaderButton"><Link to="/NeedEncouragement">I Need to Share Bad</Link></button>
             </section>
             <section className="SecondRow">
-            <span className="MissionBox"> mission statement </span>
+            <span className="MissionBox"> 24 HR HELP LINE  (941) 755-6805</span>
             <button className="ImmediateHelp"><Link to="/ImmediateHelp">IMMEDIATE HELP</Link></button>
             </section>
           </section>
