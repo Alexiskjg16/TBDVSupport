@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-import NavBar from '../NavBar';
 
 class App extends Component {
     render() {
@@ -15,6 +14,7 @@ class App extends Component {
                     <span><button>Submit</button></span>
                 </section>
                 <section>
+                    <h1> Read the Good Stuff! </h1>
                     <p className="StoryBox">Previous Stories</p>
                     <p className="StoryBox">Previous Stories</p>
                     <p className="StoryBox">Previous Stories</p>

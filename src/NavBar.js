@@ -6,17 +6,24 @@ class NavBar extends Component {
     render() {
       return (
         <div className="App">
-          <section className="WholeHeader">
-            <section className="TopRow">
-            <header className="TitleBox"><Link to="/">SupportResource</Link></header>
-            <button className="HeaderButton"><Link to="/FeelEmpowered">I Want to Share Good!</Link></button>
-            <button className="HeaderButton"><Link to="/NeedEncouragement">I Need to Share Bad</Link></button>
+     
+            <section>
+            <header className="TitleBox"><Link to="/">Tampa Online Support Group For D.V. Victims</Link></header>
+            </section>
+            <section className="WholeHeader">
+            <section className="EnterSubmit">
+              {/* this needs to be implimented by a specific organization*/}
+            <input className="GroupCode" placeholder="GroupCode" />
+            <button> Submit </button>
+            </section>
+            <section className="buttonsforstuff">
+            <Link to="/FeelEmpowered"><button className="HeaderButton">I Have a Victory</button></Link>
+            <Link to="/NeedEncouragement"><button className="HeaderButton">I Have A Struggle</button></Link>
+            </section>
             </section>
             <section className="SecondRow">
-            <span className="MissionBox"> 24 HR HELP LINE  (941) 755-6805</span>
-            <button className="ImmediateHelp"><Link to="/ImmediateHelp">IMMEDIATE HELP</Link></button>
+            <Link to="/ImmediateHelp"><button className="ImmediateHelp">IMMEDIATE HELP</button></Link>
             </section>
-          </section>
           </div>
       )}
     }
