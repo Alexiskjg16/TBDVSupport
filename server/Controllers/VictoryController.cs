@@ -10,15 +10,23 @@ namespace SupportSystem.Controllers {
     [Route ("api/IFeelEmpowered")]
     [ApiController]
     public class HaveaVictoryController : ControllerBase {
+
+        private SupportGroupContext db { get; set; }
+
+        public HaveaVictoryController(SupportGroupContext _db)
+        { 
+            this.db = _db;
+        }
+
+
         [HttpGet]
         public IOrderedQueryable<ShareAVictory> Get () {
               var dBConnection = new SupportGroupContext();
 
-              var WroteaVictory = dBConnection.ShareAVictory.OrderBy(o => o.Time)
+              var WroteaVictory = dBConnection.ShareAVictory.OrderBy(o => o.Date)
               .ThenBy(t => t.Date);
               return WroteaVictory;
-
-        }//END
+        }
 
         [HttpPost]
         public ShareAVictory Post ([FromBody] ShareAVictory shareAVictory){

@@ -7,18 +7,26 @@ using server;
 using SupportSystem.Models;
 
 namespace SupportSystem.Controllers {
-    [Route ("api/NeedEncouragement")]
+     [Route ("api/NeedEncouragement")]
     [ApiController]
     public class NeedEncouragementController : ControllerBase {
+       private SupportGroupContext db { get; set; }
+
+        public NeedEncouragementController(SupportGroupContext _db)
+        { 
+            this.db = _db;
+        }
+
+
         [HttpGet]
         public IOrderedQueryable<NeedEncouragement> Get () {
               var dBConnection = new SupportGroupContext();
 
-              var NeedtheHelp = dBConnection.NeedEncouragement.OrderBy(o => o.Time)
+              var NeedtheHelp = dBConnection.NeedEncouragement.OrderBy(o => o.)
               .ThenBy(t => t.Date);
               return NeedtheHelp;
 
-        }//END
+        }
 
         [HttpPost]
         public NeedEncouragement Post ([FromBody] NeedEncouragement Content){
