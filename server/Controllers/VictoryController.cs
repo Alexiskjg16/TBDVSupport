@@ -7,25 +7,25 @@ using server;
 using SupportSystem.Models;
 
 namespace SupportSystem.Controllers {
-    [Route ("api/[controller]")]
+    [Route ("api/IFeelEmpowered")]
     [ApiController]
     public class HaveaVictoryController : ControllerBase {
         [HttpGet]
-        public IOrderedQueryable<HaveaVictory> Get () {
+        public IOrderedQueryable<ShareAVictory> Get () {
               var dBConnection = new SupportGroupContext();
 
-              var WroteaVictory = dBConnection.HaveaVictory.OrderBy(o => o.Time)
+              var WroteaVictory = dBConnection.ShareAVictory.OrderBy(o => o.Time)
               .ThenBy(t => t.Date);
               return WroteaVictory;
 
         }//END
 
         [HttpPost]
-        public ShareAVictory Post ([FromBody] HaveaVictory Content){
+        public ShareAVictory Post ([FromBody] ShareAVictory shareAVictory){
             var dbConnection = new SupportGroupContext();
-            dbConnection.HaveaVictory.Add(Content);
+            dbConnection.ShareAVictory.Add(shareAVictory);
             dbConnection.SaveChanges();
-            return Content;
+            return shareAVictory;
              
         }
     }

@@ -7,7 +7,7 @@ using server;
 using SupportSystem.Models;
 
 namespace SupportSystem.Controllers {
-    [Route ("api/[controller]")]
+    [Route ("api/NeedEncouragement")]
     [ApiController]
     public class NeedEncouragementController : ControllerBase {
         [HttpGet]
