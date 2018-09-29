@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SupportSystem.Models;
 
-namespace server
+namespace SupportSystem
 {
     public partial class SupportGroupContext : DbContext
     {
@@ -27,5 +27,6 @@ namespace server
         {}
         public DbSet<NeedEncouragement> NeedEncouragement{ get; set; }
         public DbSet<ShareAVictory> ShareAVictory{ get; set; }
+        public object HaveaVictory { get; internal set; }
     }
 }
