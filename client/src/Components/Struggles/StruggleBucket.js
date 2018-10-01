@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../../App.css';
+import moment from 'moment'
 
 class Sad extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "",
-            writername: "",
+            title: '',
+            writername: '',
             date: new Date(),
             content: "",
             deleteMessage: "",
@@ -53,7 +54,7 @@ class Sad extends Component {
         });
     };
 
-    handleDeleteEvent = location => {
+    handleDeleteEvent = title => {
         fetch(`https://localhost:5001/api/NeedEncouragement/${title.id}`, {
             method: "DELETE"
         })
@@ -80,7 +81,7 @@ class Sad extends Component {
                 </section>
                 <h3>{this.state.deleteMessage}</h3>
                 <section>
-                    {this.state.locations.map(location => {
+                    {this.state.locations.map(SupportSystem => {
                         return (
                             <div key={SupportSystem.id}>
                                 <h3>{SupportSystem.title}</h3>

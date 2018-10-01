@@ -7,34 +7,61 @@ using server;
 using SupportSystem.Models;
 
 namespace SupportSystem.Controllers {
-     [Route ("api/NeedEncouragement")]
+    [Route ("api/controller")]
     [ApiController]
-    public class NeedEncouragementController : ControllerBase {
-       private SupportGroupContext db { get; set; }
+    public class NEPostsController : ControllerBase {
 
-        public NeedEncouragementController(SupportGroupContext _db)
+        private SupportGroupContext db { get; set; }
+
+        public NEPostsController(SupportGroupContext _db)
         { 
             this.db = _db;
+        }
+        public class ResponseObject
+        {
+            public bool WasSuccessful { get; set; }
+            public object Results { get; set; }
         }
 
 
         [HttpGet]
-        public IOrderedQueryable<NeedEncouragement> Get () {
-              var dBConnection = new SupportGroupContext();
+        [Route("content")]
+       public ActionResult<ResponseObject> GetAllContent(){
+              var _questions = this.db.NeedEncouragement.OrderByDescending(o => o.Date);
 
-              var NeedtheHelp = dBConnection.NeedEncouragement.OrderBy(o => o.)
-              .ThenBy(t => t.Date);
-              return NeedtheHelp;
+            var _rv = new ResponseObject
+            {
+                WasSuccessful = true,
+                Results = _questions
+            };
 
+            return _rv;
         }
+        
 
         [HttpPost]
-        public NeedEncouragement Post ([FromBody] NeedEncouragement Content){
-            var dbConnection = new SupportGroupContext();
-            dbConnection.NeedEncouragement.Add(Content);
-            dbConnection.SaveChanges();
-            return Content;
-             
+        [Route("content/add")]
+        public ActionResult<ResponseObject> PostContent([FromBody] NeedEncouragement Content)
+        {
+            var _content = new NeedEncouragement
+            {
+                Title = Content.Title,
+                Content = Content.Content,
+                Date = DateTime.Now,
+            };
+
+            this.db.NeedEncouragement.Add(_content);
+
+            this.db.SaveChanges();
+
+            var _rv = new ResponseObject
+            {
+                WasSuccessful = true,
+                Results = _content
+            };
+
+            return _rv;
+        }
+    
         }
     }
-}

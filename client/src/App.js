@@ -3,8 +3,8 @@ import './App.css';
 import NavBar from './NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './Components/HomePage';
-import FeelEmpowered from './Components/Happy';
-import Sad from './Components/Sad';
+import FeelEmpowered from './Components/Victory/VictoryBucket';
+import Sad from './Components/Struggles/StruggleBucket';
 import ImmediateHelp from './Components/ImmediateHelp'
 
 class App extends Component {

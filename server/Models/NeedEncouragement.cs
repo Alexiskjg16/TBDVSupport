@@ -3,7 +3,7 @@ using System;
 namespace SupportSystem.Models {
     public class NeedEncouragement {
         public int Id { get; set; }
-        public string UserName { get; set; }
+        public int UpvoteCount { get; set; }
         
         public DateTime Date { get; set; } = DateTime.Now;
 

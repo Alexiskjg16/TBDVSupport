@@ -7,34 +7,61 @@ using server;
 using SupportSystem.Models;
 
 namespace SupportSystem.Controllers {
-    [Route ("api/IFeelEmpowered")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class HaveaVictoryController : ControllerBase {
+    public class VictoryPostsController : ControllerBase {
 
         private SupportGroupContext db { get; set; }
 
-        public HaveaVictoryController(SupportGroupContext _db)
+        public VictoryPostsController(SupportGroupContext _db)
         { 
             this.db = _db;
+        }
+        public class ResponseObject
+        {
+            public bool WasSuccessful { get; set; }
+            public object Results { get; set; }
         }
 
 
         [HttpGet]
-        public IOrderedQueryable<ShareAVictory> Get () {
-              var dBConnection = new SupportGroupContext();
+        [Route("content")]
+       public ActionResult<ResponseObject> GetAllContent(){
+              var _questions = this.db.ShareAVictory.OrderByDescending(o => o.Date);
 
-              var WroteaVictory = dBConnection.ShareAVictory.OrderBy(o => o.Date)
-              .ThenBy(t => t.Date);
-              return WroteaVictory;
+            var _rv = new ResponseObject
+            {
+                WasSuccessful = true,
+                Results = _questions
+            };
+
+            return _rv;
         }
+        
 
         [HttpPost]
-        public ShareAVictory Post ([FromBody] ShareAVictory shareAVictory){
-            var dbConnection = new SupportGroupContext();
-            dbConnection.ShareAVictory.Add(shareAVictory);
-            dbConnection.SaveChanges();
-            return shareAVictory;
-             
+        [Route("content/add")]
+        public ActionResult<ResponseObject> PostContent([FromBody] ShareAVictory Content)
+        {
+            var _content = new ShareAVictory
+            {
+                Title = Content.Title,
+                Content = Content.Content,
+                Date = DateTime.Now,
+            };
+
+            this.db.ShareAVictory.Add(_content);
+
+            this.db.SaveChanges();
+
+            var _rv = new ResponseObject
+            {
+                WasSuccessful = true,
+                Results = _content
+            };
+
+            return _rv;
+        }
+    
         }
     }
-}
