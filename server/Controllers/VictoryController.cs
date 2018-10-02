@@ -63,5 +63,23 @@ namespace SupportSystem.Controllers {
             return _rv;
         }
     
+    [HttpPatch("{id}")]
+    public ShareAVictory Patch(int id)
+    {
+        var hearts = this.db.ShareAVictory.FirstOrDefault(f => f.Id == id);
+        hearts.UpvoteCount++;
+        this.db.SaveChanges();
+        return hearts;
+    }
+
+    [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            var VictoryPost = this.db.ShareAVictory.FirstOrDefault(f => f.Id == id);
+            this.db.ShareAVictory.Remove(VictoryPost);
+            this.db.SaveChanges();
+            return Ok(new { success = true });
+        }
+
         }
     }

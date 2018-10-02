@@ -46,16 +46,13 @@ class CreateVictoryPost extends Component {
         return (
             <div className="App">
                 <section className="topofcontext">
-                    <section>
-                        <h1>What's Your Story?</h1>
-                    </section>
                     <form onSubmit={this.handleSubmit}>
                         <span>
                             <input className="headofinput" placeholder="Title"
                                 name="title" value={this.state.title} onChange={this.handleChange}></input>
                         </span>
                         <span>
-                            <input className="paragraphbox" placeholder="Put Your Story Here!"
+                            <textarea className="paragraphbox" placeholder="Put Your Story Here!"
                                 name="body" value={this.state.body} onChange={this.handleChange} />
                         </span>
                         <span><button>Submit</button></span>
