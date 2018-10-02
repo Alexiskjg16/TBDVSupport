@@ -3,8 +3,8 @@ import './App.css';
 import NavBar from './NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './Components/HomePage';
-import FeelEmpowered from './Components/Victory/VictoryBucket';
-import Sad from './Components/Struggles/StruggleBucket';
+import VictoryBucket from './Components/Victory/VictoryBucket';
+import StruggleBucket from './Components/Struggles/StruggleBucket';
 import ImmediateHelp from './Components/ImmediateHelp'
 
 class App extends Component {
@@ -17,8 +17,8 @@ class App extends Component {
           </section>
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/FeelEmpowered" exact component={FeelEmpowered} />
-            <Route path="/NeedEncouragement" exact component={Sad} />
+            <Route path="/FeelEmpowered" exact component={VictoryBucket} />
+            <Route path="/NeedEncouragement" exact component={StruggleBucket} />
             <Route path="/ImmediateHelp" exact component={ImmediateHelp} />
           </Switch>
 

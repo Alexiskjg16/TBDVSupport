@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.css';
 
-class PostedVictory extends Component {
+class PostedStruggle extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ class PostedVictory extends Component {
         this.fetchQuestions()
     }
     fetchQuestions = () => {
-        fetch("https://localhost:5001/api/Victory/content")
+        fetch("https://localhost:5001/api/NE/content")
             .then(resp => resp.json())
             .then(questionData => {
                 this.setState({
@@ -24,7 +24,7 @@ class PostedVictory extends Component {
     
     handleChange = (question,i) => {
         console.log({question});
-        fetch(`https://localhost:5001/api/Victory/${question.id}`, {
+        fetch(`https://localhost:5001/api/NE/${question.id}`, {
             method: "PATCH",
         })
             .then(resp => resp.json())
@@ -44,7 +44,7 @@ class PostedVictory extends Component {
                     return (<section key={question.id}><h1 className="questiontitle">{question.title}</h1>
                         <header className="questionbody">{question.content}</header>
                         <section className="heartvotes"><button className="lovebutton" onClick={() => this.handleChange(question, i)}> 
-                            <span role="img" aria-label="heart">💗</span> Cheers to You!
+                            <span role="img" aria-label="heart">💗</span> I Feel Ya
                         </button>
                         <h1 className="voteCount">{question.upvoteCount}</h1></section>
                     </section>
@@ -56,4 +56,4 @@ class PostedVictory extends Component {
     }
 }
 
-export default PostedVictory;
+export default PostedStruggle;

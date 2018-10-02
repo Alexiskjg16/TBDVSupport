@@ -6,15 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using server;
 using SupportSystem.Models;
 
-namespace SupportSystem.Controllers {
+namespace SupportSystem.Controllers
+{
     [Route("api/[controller]")]
     [ApiController]
-    public class VictoryController : ControllerBase {
+    public class VictoryController : ControllerBase
+    {
 
         private SupportGroupContext db { get; set; }
 
         public VictoryController(SupportGroupContext _db)
-        { 
+        {
             this.db = _db;
         }
         public class ResponseObject
@@ -26,8 +28,9 @@ namespace SupportSystem.Controllers {
 
         [HttpGet]
         [Route("content")]
-       public ActionResult<ResponseObject> GetAllContent(){
-              var _questions = this.db.ShareAVictory.OrderByDescending(o => o.Date);
+        public ActionResult<ResponseObject> GetAllContent()
+        {
+            var _questions = this.db.ShareAVictory.OrderByDescending(o => o.Date);
 
             var _rv = new ResponseObject
             {
@@ -37,7 +40,7 @@ namespace SupportSystem.Controllers {
 
             return _rv;
         }
-        
+
 
         [HttpPost]
         [Route("content/add")]
@@ -62,24 +65,14 @@ namespace SupportSystem.Controllers {
 
             return _rv;
         }
-    
-    [HttpPatch("{id}")]
-    public ShareAVictory Patch(int id)
-    {
-        var hearts = this.db.ShareAVictory.FirstOrDefault(f => f.Id == id);
-        hearts.UpvoteCount++;
-        this.db.SaveChanges();
-        return hearts;
-    }
 
-    [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        [HttpPatch("{id}")]
+        public ShareAVictory Patch(int id)
         {
-            var VictoryPost = this.db.ShareAVictory.FirstOrDefault(f => f.Id == id);
-            this.db.ShareAVictory.Remove(VictoryPost);
+            var hearts = this.db.ShareAVictory.FirstOrDefault(f => f.Id == id);
+            hearts.UpvoteCount++;
             this.db.SaveChanges();
-            return Ok(new { success = true });
-        }
-
+            return hearts;
         }
     }
+}
