@@ -13,7 +13,7 @@ class PostedVictory extends Component {
         this.fetchQuestions()
     }
     fetchQuestions = () => {
-        fetch("https://localhost:5001/api/IFeelEmpowered")
+        fetch("https://localhost:5001/api/Victory/content")
             .then(resp => resp.json())
             .then(questionData => {
                 this.setState({
@@ -26,11 +26,11 @@ class PostedVictory extends Component {
         return (
             <div>
                 <section>
-                    <h1>{this.state.header}</h1>
+                    <h1 className="AllPostsHeader">{this.state.header}</h1>
                 </section>
                 <section>{this.state.questions.map(question => {
-                    return (<div>{ShareAVictory.Title}
-                        {ShareAVictory.Content}</div>
+                    return (<section><h1>{question.title}</h1>
+                    <header>{question.content}</header></section>
                     )
                 })}
                 </section>

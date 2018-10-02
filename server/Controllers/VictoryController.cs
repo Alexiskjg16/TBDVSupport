@@ -9,11 +9,11 @@ using SupportSystem.Models;
 namespace SupportSystem.Controllers {
     [Route("api/[controller]")]
     [ApiController]
-    public class VictoryPostsController : ControllerBase {
+    public class VictoryController : ControllerBase {
 
         private SupportGroupContext db { get; set; }
 
-        public VictoryPostsController(SupportGroupContext _db)
+        public VictoryController(SupportGroupContext _db)
         { 
             this.db = _db;
         }
