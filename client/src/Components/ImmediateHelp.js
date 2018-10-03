@@ -13,7 +13,7 @@ class ImmediateHelp extends Component {
                 </section>
                 <section className="immediatecontent">
                     <ul>
-                        <h1 className="resourceList"> List of Resources in the Tampa Bay Area </h1>
+                        <h1 className="resourceList"> List of Resources in the Tampa Bay Area: </h1>
                         <li className="resourceList"> Hope Lives Here (Tampa) </li>
                         <li className="resourceList"> (727) 312-0626 </li>
                         <li className="resourceList"> The Spring of Tampa Bay </li>
@@ -21,8 +21,8 @@ class ImmediateHelp extends Component {
                         <li className="resourceList"> Hope Family Services (Bradenton/Palmetto)</li>
                         <li className="resourceList"> (941) 747-8499 </li>
                     </ul>
-                    <section className="mapbox">
-                        <img src={purpleRibbon} />
+                    <section>
+                        <img src={purpleRibbon} className="mapbox" />
                     </section>
                 </section>
             </div>

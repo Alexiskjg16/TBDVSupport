@@ -14,7 +14,7 @@ class NavBar extends Component {
             <section className="EnterSubmit">
               {/* this needs to be implimented by a specific organization*/}
             <input className="GroupCode" placeholder="GroupCode" />
-            <button> Submit </button>
+            <Link to="/GroupCode"><button> Submit</button></Link>
             </section>
             <section className="buttonsforstuff">
             <Link to="/FeelEmpowered"><button className="HeaderButton">I Have a Victory</button></Link>

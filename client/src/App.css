@@ -78,6 +78,20 @@ justify-content: flex-end;
   margin-top: 1em;
 }
 
+.asteriskClass {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 40px;
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+.Footer {
+  background-color: rgb(236, 236, 236);
+  padding-bottom: 1em;
+}
+
 /*HappySadPages*/
 
 .StoryBox {
@@ -155,9 +169,9 @@ justify-content: flex-end;
 
 .mapbox {
   display: flex;
-  border: .1em solid black;
-  width: 20em;
-  height: 20em;
+  border: .05em solid black;
+  height: 30em;
+  width: auto;
 }
 
 .AllhrHelp {
@@ -170,6 +184,7 @@ justify-content: flex-end;
 .resourceList {
   list-style: none;
   font-size: 20px;
+  padding: .5em;
 }
 
 .immediatecontent {
