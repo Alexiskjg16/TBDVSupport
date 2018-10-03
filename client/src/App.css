@@ -12,7 +12,6 @@
   width:10em;
   font-size:18px;
   margin-left: 2em;
-  
 }
 
 .GroupCode {
@@ -66,9 +65,17 @@ justify-content: flex-end;
   align-content: center;
   background-color: white;
   border: .01em solid rgb(73, 186, 238);
-  font-size: 52px;
+  font-size: 52px; 
+}
 
- 
+.footNote {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-size: 16px;
+  color: rgb(70, 70, 70);
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 /*HappySadPages*/
@@ -157,6 +164,12 @@ justify-content: flex-end;
   display:flex;
   font-size: 42px;
   justify-content: center;
+  margin-bottom: .5em;
+}
+
+.resourceList {
+  list-style: none;
+  font-size: 20px;
 }
 
 .immediatecontent {
@@ -175,4 +188,17 @@ align-content: center;
 font-size: 24px;
 }
 
+.AboutCreator {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 18px;
+  width: 50em;
+}
+
+.mainImg {
+  display:flex;
+  align-self: center;
+  width: 30em;
+}
 

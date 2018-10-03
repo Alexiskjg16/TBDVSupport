@@ -21,7 +21,11 @@ class App extends Component {
             <Route path="/NeedEncouragement" exact component={StruggleBucket} />
             <Route path="/ImmediateHelp" exact component={ImmediateHelp} />
           </Switch>
-
+          <section>
+            <header className="footNote"> If you are still in danger, don't forget to not put personal/identifying details! While posts may
+              be anonymous, it's still a good idea to clear your browsing history as well.
+            </header>
+          </section>
         </div>
       </Router>
     );
