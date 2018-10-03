@@ -7,7 +7,7 @@ class VictoryBucket extends Component {
     render() {
         return (
             <div className="App">
-            <header> What's Your Story? </header>
+            <header className="WhatsYourStory"> What's Your Story? </header>
                 <section>
                     <CreateVictoryPost />
                 </section>

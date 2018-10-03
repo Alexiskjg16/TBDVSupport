@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 /*NavBar*/
 
 .HeaderButton {
@@ -9,14 +11,14 @@
   flex-direction: row;
   justify-content: center;
   height: 6em;
-  width:10em;
-  font-size:18px;
+  width:90%;
+  font-size:1em;
   margin-left: 2em;
 }
 
 .GroupCode {
 display: flex;
-width: 10em;
+width: 100%;
 justify-content: flex-end;
 }
 
@@ -33,6 +35,7 @@ justify-content: flex-end;
   flex-direction: column;
   background-color: rgba(170, 90, 245, 0.795);
   align-items: flex-end;
+  width: 100%;
 }
 
 .EnterSubmit {
@@ -46,17 +49,18 @@ justify-content: flex-end;
 .SecondRow {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 1em;
   margin-left: -1em;
 }
 
 .ImmediateHelp {
   display: flex;
-  height: 3em;
-  width: 16em;
-  font-size: 18px;
+  height: 120%;
+  width: 100%;
+  font-size: 1em;
   justify-content: center;
+  margin-left:3em;
 }
 
 .TitleBox {
@@ -65,14 +69,14 @@ justify-content: flex-end;
   align-content: center;
   background-color: white;
   border: .01em solid rgb(73, 186, 238);
-  font-size: 52px; 
+  font-size: 3em; 
 }
 
 .footNote {
   display: flex;
   justify-content: center;
   font-style: italic;
-  font-size: 16px;
+  font-size: 1em;
   color: rgb(70, 70, 70);
   margin-bottom: 1em;
   margin-top: 1em;
@@ -82,7 +86,7 @@ justify-content: flex-end;
   display:flex;
   justify-content: center;
   flex-direction: row;
-  font-size: 40px;
+  font-size: 2em;
   padding-top: 1em;
   margin-top: 1em;
 }
@@ -90,24 +94,22 @@ justify-content: flex-end;
 .Footer {
   background-color: rgb(236, 236, 236);
   padding-bottom: 1em;
+  width: 100%;
 }
 
 /*HappySadPages*/
+
+.WhatsYourStory {
+  font-size: 2em;
+  margin-bottom: 2em;
+}
 
 .StoryBox {
   display: flex;
   border: .1em solid purple;
   margin-left: 20em;
   height: 8em;
-  width: 50em;
-}
-
-.paragraphbox {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 12em;
-  width: 50em;
+  width: 50%;
 }
 
 .topofcontext {
@@ -123,35 +125,52 @@ justify-content: flex-end;
   margin-left: 20em;
   margin-bottom: 3em;
   height: 3em;
-  width: 14em;
+  width: 30%;
+}
+
+.paragraphbox {
+  display: flex;
+  justify-content: center;
+  height: 12em;
+  width: 50%;
+  font-size: 1em;
+}
+
+.submitButton {
+  display: flex;
+  height: 100%;
+  width: 15%;
+  justify-content:center;
+  margin-top: .5em;
+  margin-left: 10em;
 }
 
 .questiontitle {
   display: flex;
-  border: .01em solid grey;
+  border: .01em solid rgb(189, 187, 187);
   justify-content: flex-start;
   align-items: center;
-  width: 50em;
-  height: 1.5em;
-  padding-left: 0.5em;
-  margin-left: 10em;
+  width: 50%;
+  height: 100%;
+  margin-left: 20.1em;
 }
 
 .questionbody {
   display: flex;
-  border: .01em solid grey;
+  border: .01em solid rgb(189, 187, 187);
   justify-content: flex-start;
-  width: 50em;
-  min-height: 12em;
-  margin-left: 10em;
+  width: 50%;
+  min-height: 40%;
+  margin-left: 18em;
+  font-size: 1em;
 }
 
 .lovebutton {
   display: flex;
   justify-content: center;
-  margin-left: 14em;
+  margin-left: 19em;
   margin-top: 1em;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 .heartvotes {
@@ -161,7 +180,7 @@ justify-content: flex-end;
 
 .voteCount {
   display: flex;
-  font-size: 18px;
+  font-size: 1.5em;
   margin: 1em;
 }
 
@@ -176,14 +195,14 @@ justify-content: flex-end;
 
 .AllhrHelp {
   display:flex;
-  font-size: 42px;
+  font-size: 2em;
   justify-content: center;
   margin-bottom: .5em;
 }
 
 .resourceList {
   list-style: none;
-  font-size: 20px;
+  font-size: 1.3em;
   padding: .5em;
 }
 
@@ -200,20 +219,20 @@ justify-content: flex-end;
 display: flex;
 flex-direction: column;
 align-content: center;
-font-size: 24px;
+font-size: 1.8em;
 }
 
 .AboutCreator {
   display: flex;
   justify-content: center;
   align-self: center;
-  font-size: 18px;
-  width: 50em;
+  font-size: 1em;
+  width: 75%;
 }
 
 .mainImg {
   display:flex;
   align-self: center;
-  width: 30em;
+  width: 50%;
 }
 

@@ -8,7 +8,7 @@ class NavBar extends Component {
         <div className="App">
      
             <section>
-            <header className="TitleBox"><Link to="/">Tampa Online Support Group For D.V. Victims</Link></header>
+            <header className="TitleBox"><Link to="/">Tampa Online Support Group For Domestic Violence Survivors</Link></header>
             </section>
             <section className="WholeHeader">
             <section className="EnterSubmit">
