@@ -40,7 +40,7 @@ class PostedStruggle extends Component {
                 <section>
                     <h1 className="AllPostsHeader">{this.state.header}</h1>
                 </section>
-                <section>{this.state.questions.map((question,i) => {
+                <section className="AllPostedQuestions">{this.state.questions.map((question,i) => {
                     return (<section key={question.id}><h1 className="questiontitle">{question.title}</h1>
                         <header className="questionbody">{question.content}</header>
                         <section className="heartvotes"><button className="lovebutton" onClick={() => this.handleChange(question, i)}> 

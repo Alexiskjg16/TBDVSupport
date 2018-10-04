@@ -13,7 +13,7 @@
   height: 6em;
   width:90%;
   font-size:1em;
-  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .GroupCode {
@@ -145,31 +145,39 @@ justify-content: flex-end;
   margin-left: 10em;
 }
 
+.AllPostedQuestions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .questiontitle {
   display: flex;
   border: .01em solid rgb(189, 187, 187);
-  justify-content: flex-start;
   align-items: center;
   width: 50%;
-  height: 100%;
-  margin-left: 20.1em;
+  height: 5%;
+  margin-left: 19em;
+  padding: 1em;
 }
 
 .questionbody {
   display: flex;
   border: .01em solid rgb(189, 187, 187);
-  justify-content: flex-start;
   width: 50%;
   min-height: 40%;
-  margin-left: 18em;
+  width: 50%;
   font-size: 1em;
+  padding: 1em;
+  margin-left: 19em;
 }
 
 .lovebutton {
   display: flex;
   justify-content: center;
-  margin-left: 19em;
   margin-top: 1em;
+  padding-left: 1em;
   font-size: 1em;
 }
 
@@ -189,7 +197,7 @@ justify-content: flex-end;
 .mapbox {
   display: flex;
   border: .05em solid black;
-  height: 30em;
+  height: 90%;
   width: auto;
 }
 
