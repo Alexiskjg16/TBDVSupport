@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../App.css';
+import moment from 'moment';
 
 class PostedStruggle extends Component {
     constructor(props) {
@@ -33,6 +34,10 @@ class PostedStruggle extends Component {
             });
     };
 
+    formatDate = (date) => {
+        return moment(date).format('MMMM Do YYYY, h:mm:ss a')
+    }
+            
 
     render() {
         return (
@@ -42,8 +47,9 @@ class PostedStruggle extends Component {
                 </section>
                 <section className="AllPostedQuestions">{this.state.questions.map((question,i) => {
                     return (<section key={question.id}><h1 className="questiontitle">{question.title}</h1>
-                        <header className="questionbody">{question.content}</header>
-                        <section className="heartvotes"><button className="lovebutton" onClick={() => this.handleChange(question, i)}> 
+                        <div className="questionbody">{question.content}</div>
+                        <header className="datePosted">{this.formatDate(question.date)}</header>
+                        <section><button className="lovebutton" onClick={() => this.handleChange(question, i)}> 
                             <span role="img" aria-label="heart">💗</span> I Feel Ya
                         </button>
                         <h1 className="voteCount">{question.upvoteCount}</h1></section>

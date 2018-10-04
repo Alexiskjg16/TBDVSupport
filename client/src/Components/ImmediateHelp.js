@@ -22,7 +22,7 @@ class ImmediateHelp extends Component {
                         <li className="resourceList"> (941) 747-8499 </li>
                     </ul>
                     <section>
-                        <img src={purpleRibbon} className="mapbox" />
+                        <img src={purpleRibbon} className="mapbox" alt="PurpleRibbon" />
                     </section>
                 </section>
             </div>

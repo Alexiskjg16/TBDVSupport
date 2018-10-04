@@ -7,7 +7,7 @@ class HomePage extends Component {
         return (
             <div className="AboutHome">
                 <h1> October is Domestic Violence Awareness Month!</h1>
-                <img src={domesticViolence} className="mainImg" />
+                <img src={domesticViolence} className="mainImg" alt="SpeakUp"/>
                 <p className="AboutCreator"> Welcome to the Domestic Violence Online Support Group, a webpage 
                 dedicated to helping those effected by domestic violence. On these pages you can click "I Have 
                 A Victory" to share your successes and victories in your journey, or on "I Have A Struggle" you

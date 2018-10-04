@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../App.css';
+import moment from 'moment'
 
 class PostedVictory extends Component {
     constructor(props) {
@@ -20,10 +21,11 @@ class PostedVictory extends Component {
                     questions: questionData.results
                 })
             })
+            
     }
-    
-    handleChange = (question,i) => {
-        console.log({question});
+
+    handleChange = (question, i) => {
+        console.log({ question });
         fetch(`https://localhost:5001/api/Victory/${question.id}`, {
             method: "PATCH",
         })
@@ -32,7 +34,11 @@ class PostedVictory extends Component {
                 this.fetchQuestions();
             });
     };
-
+    
+    formatDate = (date) => {
+        return moment(date).format('MMMM Do YYYY, h:mm:ss a')
+    }
+            
 
     render() {
         return (
@@ -40,14 +46,17 @@ class PostedVictory extends Component {
                 <section>
                     <h1 className="AllPostsHeader">{this.state.header}</h1>
                 </section>
-                <section className="AllPostedQuestions">{this.state.questions.map((question,i) => {
+                <section className="AllPostedQuestions">{this.state.questions.map((question, i) => {
                     return (<section key={question.id}><h1 className="questiontitle">{question.title}</h1>
                         <header className="questionbody">{question.content}</header>
-                        <section className="heartvotes"><button className="lovebutton" onClick={() => this.handleChange(question, i)}> 
-                            <span role="img" aria-label="heart">💗</span> Cheers to You!
-                        </button>
-                        <h1 className="voteCount">{question.upvoteCount}</h1></section>
-                    </section>
+                        <header className="datePosted">{this.formatDate(question.date)}</header>
+                        <section>
+                          <button className="lovebutton" onClick={() => this.handleChange(question, i)}>
+                             <span role="img" aria-label="heart">💗</span> Cheers to You!
+                          </button>
+                           <span><h1>{question.upvoteCount}</h1></span>
+                        </section>
+                </section>
                     )
                 })}
                 </section>

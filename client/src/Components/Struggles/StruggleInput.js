@@ -52,10 +52,10 @@ class CreateStrugglePost extends Component {
                                 name="title" value={this.state.title} onChange={this.handleChange}></input>
                         </span>
                         <span>
-                            <textarea className="paragraphbox" placeholder="Put Your Story Here!"
+                            <textarea className="paragraphbox" placeholder="Post Here!"
                                 name="body" value={this.state.body} onChange={this.handleChange} />
                         </span>
-                        <span><button>Submit</button></span>
+                        <span><button className="submitButton">Submit</button></span>
                     </form>
                 </section>
             </div>
