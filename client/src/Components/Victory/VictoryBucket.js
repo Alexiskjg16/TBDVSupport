@@ -4,15 +4,38 @@ import CreateVictoryPost from './VictoryInput';
 import PostedVictory from './VictoryPosts'
 
 class VictoryBucket extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            header: "All Posts",
+            questions: [],
+        }
+    }
+    componentDidMount() {
+        this.fetchQuestions()
+    }
+    fetchQuestions = () => {
+        fetch("https://localhost:5001/api/Victory/content")
+            .then(resp => resp.json())
+            .then(questionData => {
+                this.setState({
+                    questions: questionData.results
+                })
+            })
+            
+    }
+
+
     render() {
         return (
             <div className="App">
-            <header className="WhatsYourStory"> What's Your Story? </header>
+            <header className="WhatsYourStory"> What's Your Victory Today? </header>
                 <section>
-                    <CreateVictoryPost />
+                    <CreateVictoryPost fetchQuestions={this.fetchQuestions}/>
                 </section>
                 <section>
-                    <PostedVictory />
+                    <PostedVictory fetchQuestions={this.fetchQuestions} questions={this.state.questions}/>
                 </section>
             </div>
         );

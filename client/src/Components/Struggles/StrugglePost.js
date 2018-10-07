@@ -3,34 +3,15 @@ import '../../App.css';
 import moment from 'moment';
 
 class PostedStruggle extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            header: "All Posts",
-            questions: [],
-        }
-    }
-    componentDidMount() {
-        this.fetchQuestions()
-    }
-    fetchQuestions = () => {
-        fetch("https://localhost:5001/api/NE/content")
-            .then(resp => resp.json())
-            .then(questionData => {
-                this.setState({
-                    questions: questionData.results
-                })
-            })
-    }
     
-    handleChange = (question,i) => {
+    handleChange = (question, i) => {
         console.log({question});
         fetch(`https://localhost:5001/api/NE/${question.id}`, {
             method: "PATCH",
         })
             .then(resp => resp.json())
             .then(() => {
-                this.fetchQuestions();
+                this.props.fetchQuestions();
             });
     };
 
@@ -43,9 +24,9 @@ class PostedStruggle extends Component {
         return (
             <div>
                 <section>
-                    <h1 className="AllPostsHeader">{this.state.header}</h1>
+                    <h1 className="AllPostsHeader">All Posts</h1>
                 </section>
-                <section className="AllPostedQuestions">{this.state.questions.map((question,i) => {
+                <section className="AllPostedQuestions">{this.props.questions.map((question,i) => {
                     return (<section key={question.id}><h1 className="questiontitle">{question.title}</h1>
                         <div className="questionbody">{question.content}</div>
                         <header className="datePosted">{this.formatDate(question.date)}</header>

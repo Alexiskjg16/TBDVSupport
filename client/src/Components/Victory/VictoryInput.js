@@ -35,6 +35,7 @@ class CreateVictoryPost extends Component {
             .then(resp => resp.json())
             .then(questionData => {
                 console.log(questionData)
+                this.props.fetchQuestions()
                 this.setState({
                     title: "",
                     body: ""
