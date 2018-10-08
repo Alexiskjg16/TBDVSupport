@@ -25,7 +25,7 @@ class CreateStrugglePost extends Component {
             "CreatedBy": "anonymous"
         }
 
-        fetch("https://localhost:5001/api/NE/content/add", {
+        fetch("https://tbdvsupport.herokuapp.com/api/NE/content/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"

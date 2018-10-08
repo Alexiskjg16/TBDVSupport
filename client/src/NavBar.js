@@ -20,7 +20,7 @@ class NavBar extends Component {
             </section>
             </section>
             <section className="SecondRow">
-            <Link to="/ImmediateHelp" className="ImmediateHelp">IMMEDIATE HELP</Link>
+            <Link to="/ImmediateHelp" className="ImmediateHelp">NEED HELP NOW</Link>
             </section>
           </div>
       )}

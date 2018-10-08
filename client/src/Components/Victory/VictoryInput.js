@@ -25,7 +25,7 @@ class CreateVictoryPost extends Component {
             "CreatedBy": "anonymous"
         }
 
-        fetch("https://localhost:5001/api/Victory/content/add", {
+        fetch("https://tbdvsupport.herokuapp.com/api/Victory/content/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"

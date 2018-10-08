@@ -16,7 +16,7 @@ class StruggleBucket extends Component {
         this.fetchQuestions()
     }
     fetchQuestions = () => {
-        fetch("https://localhost:5001/api/NE/content")
+        fetch("https://tbdvsupport.herokuapp.com/api/NE/content")
             .then(resp => resp.json())
             .then(questionData => {
                 this.setState({

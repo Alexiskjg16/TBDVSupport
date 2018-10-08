@@ -16,7 +16,7 @@ class VictoryBucket extends Component {
         this.fetchQuestions()
     }
     fetchQuestions = () => {
-        fetch("https://localhost:5001/api/Victory/content")
+        fetch("https://tbdvsupport.herokuapp.com/api/Victory/content/content")
             .then(resp => resp.json())
             .then(questionData => {
                 this.setState({

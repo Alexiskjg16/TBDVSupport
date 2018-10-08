@@ -6,7 +6,7 @@ class PostedStruggle extends Component {
     
     handleChange = (question, i) => {
         console.log({question});
-        fetch(`https://localhost:5001/api/NE/${question.id}`, {
+        fetch(`https://tbdvsupport.herokuapp.com/api/NE/content/${question.id}`, {
             method: "PATCH",
         })
             .then(resp => resp.json())
