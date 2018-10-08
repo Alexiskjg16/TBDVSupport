@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using SupportSystem.Models;
 
 namespace SupportSystem
@@ -18,8 +19,8 @@ namespace SupportSystem
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseNpgsql("server=localhost;database=SupportGroup");
+            var conn = Environment.GetEnvironmentVariable("CONNECTION_STRING") ?? "server=localhost;database=SupportGroup";
+                optionsBuilder.UseNpgsql(conn);
             }
         }
 
