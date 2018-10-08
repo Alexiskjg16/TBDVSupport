@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../App.css';
-import VictoryBucket from './VictoryBucket'
 import moment from 'moment'
 
 class PostedVictory extends Component {

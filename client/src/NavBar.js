@@ -14,13 +14,13 @@ class NavBar extends Component {
             <Link to="/GroupCode"><button> Submit</button></Link>
             </section>
             <section className="buttonsforstuff">
-            <Link to="/FeelEmpowered"><button className="VictoryButton">I Have a Victory</button></Link>
+            <Link to="/FeelEmpowered" className="VictoryButton">I Have a Victory</Link>
             <Link to="/"><img src={LogoMakr} alt="Logo" className="TitleBox"/></Link>
-            <Link to="/NeedEncouragement"><button className="StruggleButton">I Have A Struggle</button></Link>
+            <Link to="/NeedEncouragement" className="StruggleButton">I Have A Struggle</Link>
             </section>
             </section>
             <section className="SecondRow">
-            <Link to="/ImmediateHelp"><button className="ImmediateHelp">IMMEDIATE HELP</button></Link>
+            <Link to="/ImmediateHelp" className="ImmediateHelp">IMMEDIATE HELP</Link>
             </section>
           </div>
       )}

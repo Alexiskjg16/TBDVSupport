@@ -8,8 +8,8 @@ class ImmediateHelp extends Component {
             <div className="App">
                 <section>
                     <span className="AllhrHelp"> If you are in immediate danger, please call 911! </span>
-                    <span className="AllhrHelp"> LOCAL 24 HR HELP LINE  (941) 755-6805 </span>
-                    <span className="AllhrHelp"> NATIONAL 24HR HELP LINE 1(800) 799-7233 </span>
+                    <span className="AllhrHelp"> LOCAL 24HR HELP LINE (941) 755-6805 </span>
+                    <span className="AllhrHelp"> NATIONAL 24HR HELP LINE (800) 799-7233 </span>
                 </section>
                 <section className="immediatecontent">
                     <ul>

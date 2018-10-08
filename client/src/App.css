@@ -10,26 +10,35 @@
 .VictoryButton {
   display:flex;
   justify-content: center;
-  height: 70%;
-  width: 200%;
-  font-size: 1em;
+  height: 100%;
+  width: 160%;
+  font-size: 1.5em;
   margin-left: 1em;
+  background-color: rgb(233, 233, 233);
+  border: .001em solid turquoise;
+  padding: 0.5em;
+  border-radius: 5px;
 }
 
 .StruggleButton {
   display: flex;
   justify-content: center;
-  height: 70%;
-  width: 100%;
-  font-size: 1em;
-  margin-left: 9em;
- 
+  height: 100%;
+  width: 160%;
+  font-size: 1.5em;
+  margin-left: 2em;
+  margin-right: 1em;
+  background-color: rgb(233, 233, 233);
+  border: .001em solid turquoise;
+  padding: 0.5em;
+  border-radius: 5px;
 }
 
 .GroupCode {
   display: flex;
   width: 10%;
   justify-content: flex-end;
+  margin-left: 2%;
 }
 
 .buttonsforstuff {
@@ -62,17 +71,22 @@
 
 .ImmediateHelp {
   display: flex;
-  height: 120%;
-  width: 100%;
-  font-size: 1em;
   justify-content: center;
-  margin-left:3em;
+  flex-wrap: none;
+  height: 140%;
+  width: 50%;
+  font-size: 1.5em;
+  margin-left: 25%;
+  background-color: rgb(233, 233, 233);
+  border: .001em solid turquoise;
+  padding: 0.5em;
+  border-radius: 5px;
 }
 
 .TitleBox {
-  display: flex;
+ display: flex;
  height: 100%;
- margin-left: 15em;
+ margin-left: 5em;
 }
 
 .footNote {
@@ -184,8 +198,6 @@
   flex-direction: row;
   margin: 1em;
   font-size: 1.5em;
-  /* height: 2em;
-  width: 5em; */
 }
 
 .datePosted {
@@ -201,6 +213,7 @@
   border: .05em solid black;
   height: 90%;
   width: auto;
+  margin-left: -2em;
 }
 
 .AllhrHelp {
@@ -234,7 +247,6 @@ font-size: 1.8em;
 
 .AboutCreator {
   display: flex;
-  justify-content: center;
   align-self: center;
   font-size: 1em;
   width: 75%;
