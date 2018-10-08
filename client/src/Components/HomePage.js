@@ -14,6 +14,7 @@ class HomePage extends Component {
                 can let us know your story or a struggle you are having. Even though there's no usernames to keep 
                 our users anonymous, these posts are public, so be cautious with specific details, but take 
                 comfort in reading others' stories and knowing that you are NOT alone. </p>
+                <p className="LogomakrCredit">Logo created using LogoMakr</p>
             </div>
         )
     }
