@@ -13,8 +13,8 @@
     "react-scripts": "1.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_API_URL=https://localhost:5001/api/ react-scripts start",
+    "build": "REACT_APP_API_URL=https://tbdvsupport.herokuapp.com/api/ react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy":"yarn build; surge ./build"

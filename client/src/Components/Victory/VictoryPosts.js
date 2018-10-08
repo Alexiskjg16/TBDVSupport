@@ -6,7 +6,7 @@ class PostedVictory extends Component {
     
     handleChange = (question, i) => {
         console.log({ question });
-        fetch(`https://tbdvsupport.herokuapp.com/api/Victory/content/${question.id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}Victory/${question.id}`, {
             method: "PATCH",
         })
             .then(resp => resp.json())

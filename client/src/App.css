@@ -10,35 +10,27 @@
 .VictoryButton {
   display:flex;
   justify-content: center;
-  height: 100%;
-  width: 130%;
+  width: 100%;
   font-size: 1.5em;
-  margin-left: 1em;
-  background-color: rgb(233, 233, 233);
-  border: .001em solid turquoise;
   padding: 0.5em;
-  border-radius: 5px;
+  margin-top: 2em;
 }
 
 .StruggleButton {
   display: flex;
   justify-content: center;
-  height: 100%;
-  width: 130%;
+  width: 100%;
   font-size: 1.5em;
-  margin-left: 2em;
-  margin-right: 1em;
-  background-color: rgb(233, 233, 233);
-  border: .001em solid turquoise;
   padding: 0.5em;
-  border-radius: 5px;
+  margin-top: 2em;
 }
 
 .GroupCode {
   display: flex;
-  width: 10%;
   justify-content: flex-end;
-  margin-left: 2%;
+  height: 10%;
+  margin-top: 6em;
+  margin-right: .5em;
 }
 
 .buttonsforstuff {
@@ -48,44 +40,31 @@
 
 .WholeHeader {
   display: flex;
-  flex-direction: column;
   background-color: rgba(170, 90, 245, 0.795);
   width: 100%;
+  margin-left: -1em;
+  align-content: flex-end;
 }
 
 .EnterSubmit {
   display: flex;
   flex-direction: row;
-  margin-right: 1.5em;
-  margin-bottom: .5em;
   margin-top: .5em;
-}
-
-.SecondRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 1em;
-  margin-left: -1em;
 }
 
 .ImmediateHelp {
   display: flex;
   justify-content: center;
-  height: 140%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   font-size: 1.5em;
-  margin-left: 25%;
-  background-color: rgb(233, 233, 233);
-  border: .001em solid turquoise;
   padding: 0.5em;
-  border-radius: 5px;
+  margin-top: 2em;
 }
 
 .TitleBox {
  display: flex;
  height: 100%;
- margin-left: 5em;
 }
 
 .footNote {
@@ -118,6 +97,7 @@
 .WhatsYourStory {
   font-size: 2em;
   margin-bottom: 2em;
+  margin-top:1em;
 }
 
 .StoryBox {
@@ -138,7 +118,6 @@
 .headofinput {
   display: flex;
   justify-content: center;
-  
   margin-bottom: 3em;
   height: 3em;
   width: 30%;
@@ -168,6 +147,13 @@
   flex-direction: column;
   margin: auto;
   margin-left: 3em;
+}
+
+.AllPostsHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 1em;
 }
 
 .questiontitle {
@@ -212,7 +198,8 @@
   border: .05em solid black;
   height: 90%;
   width: auto;
-  margin-left: -2em;
+  margin-left: -4em;
+  margin-top: 1em;
 }
 
 .AllhrHelp {

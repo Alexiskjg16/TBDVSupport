@@ -25,7 +25,7 @@ class CreateStrugglePost extends Component {
             "CreatedBy": "anonymous"
         }
 
-        fetch("https://tbdvsupport.herokuapp.com/api/NE/content/add", {
+        fetch(`${process.env.REACT_APP_API_URL}NE/content/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"

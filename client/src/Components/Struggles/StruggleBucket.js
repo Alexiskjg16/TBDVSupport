@@ -16,7 +16,7 @@ class StruggleBucket extends Component {
         this.fetchQuestions()
     }
     fetchQuestions = () => {
-        fetch("https://tbdvsupport.herokuapp.com/api/NE/content")
+        fetch(`${process.env.REACT_APP_API_URL}NE/content`)
             .then(resp => resp.json())
             .then(questionData => {
                 this.setState({

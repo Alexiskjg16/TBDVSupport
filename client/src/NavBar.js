@@ -5,23 +5,23 @@ import LogoMakr from './Components/Images/LogoMakr.png'
 
 class NavBar extends Component {
     render() {
+      console.log(process.env)
       return (
         <div className="App">
             <section className="WholeHeader">
-            <section className="EnterSubmit">
-              {/* this needs to be implimented by a specific organization*/}
-            <input className="GroupCode" placeholder="GroupCode" />
-            <Link to="/GroupCode"><button> Submit</button></Link>
-            </section>
+            <Link to="/"><img src={LogoMakr} alt="Logo" className="TitleBox"/></Link> 
+            {/* this needs to be implimented by a specific organization*/}
             <section className="buttonsforstuff">
-            <Link to="/FeelEmpowered" className="VictoryButton">I Have a Victory</Link>
-            <Link to="/"><img src={LogoMakr} alt="Logo" className="TitleBox"/></Link>
+            <Link to="/FeelEmpowered" className="VictoryButton">{process.env.REACT_APP_NODE_ENV}I Have a Victory</Link>
             <Link to="/NeedEncouragement" className="StruggleButton">I Have A Struggle</Link>
-            </section>
-            </section>
-            <section className="SecondRow">
             <Link to="/ImmediateHelp" className="ImmediateHelp">NEED HELP NOW</Link>
             </section>
+            <section className="GroupCode">
+            <input placeholder="GroupCode" />
+            <Link to="/GroupCode"><button> Submit</button></Link>
+            </section>
+            </section>
+            
           </div>
       )}
     }
