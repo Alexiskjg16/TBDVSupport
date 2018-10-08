@@ -248,6 +248,8 @@ font-size: 1.8em;
 .AboutCreator {
   display: flex;
   align-self: center;
+  text-align: start;
+  flex-wrap: nowrap;
   font-size: 1em;
   width: 75%;
 }
