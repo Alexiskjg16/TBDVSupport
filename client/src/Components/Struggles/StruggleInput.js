@@ -48,11 +48,11 @@ class CreateStrugglePost extends Component {
                 <section className="topofcontext">
                     <form onSubmit={this.handleSubmit}>
                         <span>
-                            <input className="headofinput" placeholder="Title"
+                            <input className="headofinput" placeholder="Put A Relevant Title Here"
                                 name="title" value={this.state.title} onChange={this.handleChange}></input>
                         </span>
                         <span>
-                            <textarea className="paragraphbox" placeholder="Post Here!"
+                            <textarea className="paragraphbox" placeholder="Post Your Story!!"
                                 name="body" value={this.state.body} onChange={this.handleChange} />
                         </span>
                         <span><button className="submitButton">Submit</button></span>
