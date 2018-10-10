@@ -14,11 +14,11 @@ class ImmediateHelp extends Component {
                 <section className="immediatecontent">
                     <ul>
                         <h1 className="resourceList"> List of Resources in the Tampa Bay Area: </h1>
-                        <li className="resourceList"> Hope Lives Here (Tampa) </li>
+                        <a href="https://www.psychologytoday.com/us/groups/hope-lives-here-tampa-fl/127120" target="_blank" className="resourceList"> Hope Lives Here (Tampa) </a>
                         <li className="resourceList"> (727) 312-0626 </li>
-                        <li className="resourceList"> The Spring of Tampa Bay </li>
+                        <a href="https://www.thespring.org/" target="_blank" className="resourceList"> The Spring of Tampa Bay </a>
                         <li className="resourceList"> (813) 247-7233 </li>
-                        <li className="resourceList"> Hope Family Services (Bradenton/Palmetto)</li>
+                        <a href="https://www.hopefamilyservice.org/" target="_blank" className="resourceList"> Hope Family Services (Bradenton/Palmetto)</a>                        <a href="" className="resourceList"> Hope Family Services (Bradenton/Palmetto)</a>
                         <li className="resourceList"> (941) 747-8499 </li>
                     </ul>
                     <section>

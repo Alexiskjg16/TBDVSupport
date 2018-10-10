@@ -13,6 +13,7 @@
   width: 100%;
   font-size: 1.5em;
   margin-top: 2em;
+  margin-left: 5em;
   text-decoration: none;
   color: white;
 }
@@ -57,7 +58,7 @@
  display: flex;
  height: 100%;
  margin-left: -4em;
- margin-right: -5em;
+
 }
 
 .footNote {
