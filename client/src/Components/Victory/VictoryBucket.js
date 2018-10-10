@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import '../../App.css';
 import CreateVictoryPost from './VictoryInput';
 import PostedVictory from './VictoryPosts'
+import victoryGirl from '../Images/victorygirl.jpg'
 
 class VictoryBucket extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -23,19 +24,20 @@ class VictoryBucket extends Component {
                     questions: questionData.results
                 })
             })
-            
+
     }
 
 
     render() {
         return (
             <div className="App">
-            <header className="WhatsYourStory"> What's Your Victory Today? </header>
+                <header className="WhatsYourStory"> What's Your Victory Today? </header>
+                <img src={victoryGirl} className="victoryGirlPic" ></img>
                 <section>
-                    <CreateVictoryPost fetchQuestions={this.fetchQuestions}/>
+                    <CreateVictoryPost fetchQuestions={this.fetchQuestions} />
                 </section>
                 <section>
-                    <PostedVictory fetchQuestions={this.fetchQuestions} questions={this.state.questions}/>
+                    <PostedVictory fetchQuestions={this.fetchQuestions} questions={this.state.questions} />
                 </section>
             </div>
         );

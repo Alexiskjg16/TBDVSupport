@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import CreateStrugglePost from './StruggleInput';
-import PostedStruggle from './StrugglePost'
+import PostedStruggle from './StrugglePost';
+import brokenHeart from '../Images/brokenheart.jpg'
 
 class StruggleBucket extends Component {
 
@@ -30,6 +31,7 @@ class StruggleBucket extends Component {
         return (
             <div className="App">
             <header className="WhatsYourStory"> What's Your Struggle Today? </header>
+            <img src={brokenHeart} className="brokenHeartPic" ></img>
                 <section>
                     <CreateStrugglePost fetchQuestions={this.fetchQuestions}/>
                 </section>
