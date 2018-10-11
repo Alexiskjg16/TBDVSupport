@@ -18,7 +18,7 @@ class ImmediateHelp extends Component {
                         <li className="resourceList"> (727) 312-0626 </li>
                         <a href="https://www.thespring.org/" target="_blank" className="resourceList"> The Spring of Tampa Bay </a>
                         <li className="resourceList"> (813) 247-7233 </li>
-                        <a href="https://www.hopefamilyservice.org/" target="_blank" className="resourceList"> Hope Family Services (Bradenton/Palmetto)</a>                        <a href="" className="resourceList"> Hope Family Services (Bradenton/Palmetto)</a>
+                        <a href="https://www.hopefamilyservice.org/" target="_blank" className="resourceList"> Hope Family Services (Bradenton/Palmetto)</a>
                         <li className="resourceList"> (941) 747-8499 </li>
                     </ul>
                     <section>
