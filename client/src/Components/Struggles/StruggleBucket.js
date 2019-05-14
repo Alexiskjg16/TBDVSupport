@@ -31,7 +31,7 @@ class StruggleBucket extends Component {
         return (
             <div className="App">
             <header className="WhatsYourStory"> What's Your Struggle Today? </header>
-            <img src={brokenHeart} className="brokenHeartPic" ></img>
+            <img src={brokenHeart} alt="Struggle" className="brokenHeartPic" ></img>
                 <section>
                     <CreateStrugglePost fetchQuestions={this.fetchQuestions}/>
                 </section>

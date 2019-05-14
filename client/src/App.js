@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './NavBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './Components/HomePage';
 import VictoryBucket from './Components/Victory/VictoryBucket';
 import StruggleBucket from './Components/Struggles/StruggleBucket';

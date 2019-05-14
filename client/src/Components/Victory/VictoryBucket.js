@@ -32,7 +32,7 @@ class VictoryBucket extends Component {
         return (
             <div className="App">
                 <header className="WhatsYourStory"> What's Your Victory Today? </header>
-                <img src={victoryGirl} className="victoryGirlPic" ></img>
+                <img src={victoryGirl} alt="Victory" className="victoryGirlPic" ></img>
                 <section>
                     <CreateVictoryPost fetchQuestions={this.fetchQuestions} />
                 </section>

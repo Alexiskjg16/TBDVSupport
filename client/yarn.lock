@@ -3091,6 +3091,13 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+hashrouter@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/hashrouter/-/hashrouter-1.1.1.tgz#4da532d633b15cdc0387964e3bfc1c2ccfca71cf"
+  integrity sha1-TaUy1jOxXNwDh5ZOO/wcLM/Kcc8=
+  dependencies:
+    http-hash "^1.0.2"
+
 he@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
@@ -3210,6 +3217,11 @@ http-errors@~1.6.2:
     inherits "2.0.3"
     setprototypeof "1.1.0"
     statuses ">= 1.4.0 < 2"
+
+http-hash@^1.0.2:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/http-hash/-/http-hash-1.1.1.tgz#df20679d1df359052a3c8572bf335230762d428d"
+  integrity sha1-3yBnnR3zWQUqPIVyvzNSMHYtQo0=
 
 http-parser-js@>=0.4.0:
   version "0.4.13"
